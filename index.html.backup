@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIYEON JEON — Product Design/Manage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        cursor: none; /* Hide default cursor */
+      }
+      
+      /* Re-enable default cursor for touch devices */
+      @media (pointer: coarse) {
+        body {
+          cursor: auto;
+        }
+        .custom-cursor {
+          display: none !important;
+        }
+      }
+
+      ::selection {
+        background-color: #3b82f6;
+        color: white;
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #e4e4e7;
+        border-radius: 10px;
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #27272a;
+      }
+
+      @keyframes fade-in-up {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-fade-in {
+        animation: fade-in-up 0.5s ease-out forwards;
+      }
+
+      /* Smooth Page Transition */
+      @keyframes slide-up-fade {
+        0% {
+          opacity: 0;
+          transform: translateY(40px) scale(0.98);
+          filter: blur(4px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+          filter: blur(0);
+        }
+      }
+      
+      .page-transition {
+        animation: slide-up-fade 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+
+      /* Custom Cursor Styles */
+      .custom-cursor {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #a1a1aa; /* Grey for light mode */
+        mix-blend-mode: difference;
+        pointer-events: none;
+        z-index: 9999;
+        transform: translate(-50%, -50%);
+        transition: width 0.3s, height 0.3s, background-color 0.3s, transform 0.1s ease-out;
+      }
+      
+      /* Dark mode override: Keep it white */
+      .dark .custom-cursor {
+        background-color: white;
+      }
+      
+      .custom-cursor.hovering {
+        width: 64px;
+        height: 64px;
+        mix-blend-mode: difference;
+      }
+
+      /* Markdown Typography Hierarchy */
+      .prose h1, .prose h2, .prose h3, .prose h4, .prose h5 {
+        color: inherit;
+        font-weight: 800;
+        letter-spacing: -0.025em;
+        margin-bottom: 0.75em;
+        line-height: 1.2;
+      }
+
+      .prose h1 {
+        font-size: 2.75rem;
+        margin-top: 2.5em;
+      }
+
+      .prose h2 {
+        font-size: 2.25rem;
+        margin-top: 2em;
+      }
+
+      .prose h3 {
+        font-size: 1.875rem;
+        margin-top: 1.75em;
+      }
+
+      .prose h4 {
+        font-size: 1.5rem; /* Slightly larger than normal text (1.25rem) */
+        margin-top: 1.5em;
+      }
+
+      .prose h5 {
+        font-size: 1.25rem; /* Similar to normal text size */
+        margin-top: 1.25em;
+        font-weight: 900;
+      }
+
+      .prose p {
+        margin-bottom: 1.75em;
+        line-height: 1.8;
+        font-size: 1.25rem; /* 20px for high readability and accessibility */
+        color: rgba(82, 82, 91, 1); /* text-zinc-600 */
+      }
+      
+      .dark .prose p {
+        color: rgba(161, 161, 170, 1); /* text-zinc-400 */
+      }
+
+      /* Lists */
+      .prose ul, .prose ol {
+        padding-left: 1.5em;
+        margin-bottom: 2.5em;
+      }
+
+      .prose ul {
+        list-style-type: disc;
+      }
+
+      .prose ol {
+        list-style-type: decimal;
+      }
+
+      .prose li {
+        margin-bottom: 0.75em;
+        line-height: 1.8;
+        font-size: 1.25rem;
+        padding-left: 0.5em;
+        color: rgb(74, 74, 90, 1);
+      }
+
+      .dark .prose li {
+        color: rgba(161, 161, 170, 1);
+      }
+
+      .prose li::marker {
+        color: inherit;
+        font-weight: 700;
+        opacity: 0.8;
+      }
+
+      .prose strong {
+        color: inherit;
+        font-weight: 800;
+      }
+    </style>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-white dark:bg-black overflow-x-hidden selection:bg-blue-500 selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

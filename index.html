@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <!-- ============================================ -->
+    <!-- 기본 메타 태그 설정 -->
+    <!-- ============================================ -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- 페이지 제목 (브라우저 탭에 표시됨) -->
+    <title>SIYEON JEON — Product Design/Manage</title>
+    
+    <!-- ============================================ -->
+    <!-- Tailwind CSS 설정 -->
+    <!-- ============================================ -->
+    <!-- Tailwind CSS CDN (빌드 없이 사용) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Tailwind 설정: 다크모드와 폰트 설정
+      tailwind.config = {
+                darkMode: 'class', // class 기반 다크모드 (html에 'dark' 클래스 추가 시 활성화)
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+            },
+          },
+        },
+      }
+    </script>
+    
+    <!-- ============================================ -->
+    <!-- Google Fonts (Inter 폰트) -->
+    <!-- ============================================ -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- ============================================ -->
+    <!-- 인라인 스타일 (커스텀 CSS) -->
+    <!-- ============================================ -->
+    <!-- 주의: 여기서 수정할 때는 <style> 태그 안의 내용만 수정하세요 -->
+    <style>
+      /* ============================================ */
+      /* 기본 body 스타일 */
+      /* ============================================ */
+      body {
+        font-family: 'Inter', sans-serif;
+        -webkit-font-smoothing: antialiased; /* macOS에서 폰트 부드럽게 */
+        -moz-osx-font-smoothing: grayscale; /* Firefox에서 폰트 부드럽게 */
+        cursor: none; /* 기본 커서 숨김 (커스텀 커서 사용) */
+      }
+      
+      /* 터치 기기에서는 기본 커서 사용 (커스텀 커서 비활성화) */
+      @media (pointer: coarse) {
+        body {
+          cursor: auto;
+        }
+        .custom-cursor {
+          display: none !important;
+        }
+      }
+
+      
+      /* ============================================ */
+      /* 텍스트 선택 시 색상 */
+      /* ============================================ */
+      ::selection {
+        background-color: #3b82f6; /* 파란색 배경 */
+        color: white; /* 흰색 텍스트 */
+      }
+
+      
+      /* ============================================ */
+      /* 커스텀 스크롤바 스타일 */
+      /* ============================================ */
+
+      ::-webkit-scrollbar {
+        width: 6px; /* 스크롤바 너비 */
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent; /* 스크롤바 트랙 투명 */
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #e4e4e7; /* 라이트 모드 스크롤바 색상 */
+        border-radius: 10px;
+      }
+      .dark ::-webkit-scrollbar-thumb {
+        background: #27272a; /* 다크 모드 스크롤바 색상 */
+      }
+
+      
+      /* ============================================ */
+      /* 페이드인 애니메이션 */
+      /* ============================================ */
+      @keyframes fade-in-up {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .animate-fade-in {
+        animation: fade-in-up 0.5s ease-out forwards;
+      }
+
+      
+      /* ============================================ */
+      /* 페이지 전환 애니메이션 */
+      /* ============================================ */
+
+      @keyframes slide-up-fade {
+        0% {
+          opacity: 0;
+          transform: translateY(40px) scale(0.98);
+          filter: blur(4px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+          filter: blur(0);
+        }
+      }
+      
+      .page-transition {
+        animation: slide-up-fade 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+
+      
+      /* ============================================ */
+      /* 커스텀 커서 스타일 */
+      /* ============================================ */
+
+      .custom-cursor {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 20px; /* 기본 커서 크기 */
+        height: 20px;
+        border-radius: 50%;
+        background-color: #a1a1aa; /* 라이트 모드: 회색 */
+        mix-blend-mode: difference; /* 배경과 반전 효과 */
+        pointer-events: none; /* 마우스 이벤트 무시 */
+        z-index: 9999; /* 최상위 레이어 */
+        transform: translate(-50%, -50%);
+        transition: width 0.3s, height 0.3s, background-color 0.3s, transform 0.1s ease-out;
+      }
+      
+      /* 다크 모드: 커서를 흰색으로 */
+      .dark .custom-cursor {
+        background-color: white; /* 흰색 텍스트 */
+      }
+      
+      /* 호버 시 커서 확대 */
+      .custom-cursor.hovering {
+        width: 64px;
+        height: 64px;
+        mix-blend-mode: difference; /* 배경과 반전 효과 */
+      }
+
+      
+      /* ============================================ */
+      /* 마크다운 타이포그래피 스타일 (.prose 클래스) */
+      /* ============================================ */
+      /* 제목 공통 스타일 */
+
+      .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+        color: inherit;
+        font-weight: 700;
+        letter-spacing: -0.025em;
+        margin-bottom: 0.75em;
+        line-height: 1.2;
+      }
+
+      /* H1 스타일 */
+      .prose h1 {
+        font-size: 2.75rem; /* 44px */
+        margin-top: 2.5em;
+      }
+
+      /* H2 스타일 */
+      .prose h2 {
+        font-size: 2.25rem; /* 36px */
+        margin-top: 2em;
+      }
+
+      /* H3 스타일 */
+      .prose h3 {
+        font-size: 1.875rem; /* 30px */
+        margin-top: 1.75em;
+        font-weight: 800;
+      }
+
+      /* H4 스타일 */
+      .prose h4 {
+        font-size: 1.5rem; /* 24px */
+        margin-top: 1.5em;
+      }
+
+      /* H5 스타일 */
+      .prose h5 {
+        font-size: 1.4rem; /* 20px */ /* 20px */
+        margin-top: 1.4em;
+      }
+      /* H6 스타일 */
+      .prose h6 {
+        font-size: 1.2rem; /* 20px */ /* 20px */
+        margin-top: 1.25em;
+        font-weight: 300;
+        color: #27272a;
+        font-style: italic
+      }
+
+      /* 문단 스타일 */
+      .prose p {
+        margin-bottom: 1.75em;
+        line-height: 1.8;
+        font-size: 1.25rem; /* 20px */ /* 20px - 가독성과 접근성을 위한 크기 */
+        color: rgba(82, 82, 91, 1); /* 라이트 모드: zinc-600 */
+      }
+      
+      .dark /* 문단 스타일 */
+      .prose p {
+        color: rgba(161, 161, 170, 1); /* 다크 모드: zinc-400 */
+      }
+
+      
+      /* ============================================ */
+      /* 리스트 스타일 */
+      /* ============================================ */
+      .prose ul, /* 순서 있는 리스트 (숫자) */
+      .prose ol {
+        padding-left: 1.5em;
+        margin-bottom: 2.5em;
+      }
+
+      /* 순서 없는 리스트 (불릿) */
+      .prose ul {
+        list-style-type: disc; /* 불릿 포인트 */
+      }
+
+      /* 순서 있는 리스트 (숫자) */
+      .prose ol {
+        list-style-type: decimal; /* 숫자 */
+      }
+
+      /* 리스트 아이템 */
+      .prose li {
+        margin-bottom: 0.75em;
+        line-height: 1.8;
+        font-size: 1.25rem; /* 20px */
+        padding-left: 0.5em;
+        color: rgb(74, 74, 90, 1); /* 라이트 모드 */
+      }
+
+      .dark /* 리스트 아이템 */
+      .prose li {
+        color: rgba(161, 161, 170, 1); /* 다크 모드: zinc-400 */
+      }
+
+      /* 리스트 마커(불릿/숫자) 스타일 */
+      .prose li::marker {
+        color: inherit;
+        font-weight: 700;
+        opacity: 0.8;
+      }
+
+      /* 강조 텍스트 (bold) */
+      .prose strong {
+        color: inherit;
+        font-weight: 800;
+      }
+    </style>
+    
+    <!-- ============================================ -->
+    <!-- 외부 CSS 파일 (index.css) -->
+    <!-- ============================================ -->
+    <!-- 추가 스타일이 필요하면 index.css 파일에 작성하세요 -->
+<link rel="stylesheet" href="/index.css">
+</head>
+  
+  <!-- ============================================ -->
+  <!-- body 태그 -->
+  <!-- ============================================ -->
+  <!-- 
+    클래스 설명:
+    - bg-white: 라이트 모드 배경색 (흰색)
+    - dark:bg-black: 다크 모드 배경색 (검은색)
+    - overflow-x-hidden: 가로 스크롤 숨김
+    - selection:bg-blue-500: 텍스트 선택 시 파란색 배경
+    - selection:text-white: 텍스트 선택 시 흰색 텍스트
+  -->
+  <body class="bg-white dark:bg-black overflow-x-hidden selection:bg-blue-500 selection:text-white">
+    <!-- React 앱이 렌더링되는 루트 요소 -->
+    <div id="root"></div>
+    
+    <!-- ============================================ -->
+    <!-- React 앱 진입점 -->
+    <!-- ============================================ -->
+    <!-- index.tsx 파일이 여기서 로드되어 React 앱이 시작됩니다 -->
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
