@@ -237,18 +237,42 @@ The project successfully centralized data and reduced operational overhead by a 
     description: "Hardware synchronization UX renewal for smart agriculture monitoring.",
     overview: "Led the comprehensive upgrade of a smart farm solution from a simple monitoring tool (v2.0) to an All-in-One Integrated Farm Management System (v3.0). The renewal focused on mobile accessibility and advanced automation logic, resulting in rapid market adoption.",
     content: `
-### Problem
-Farmers found the initial setup process for IoT sensors too technical. Complex networking steps led to high return rates and low long-term engagement.
+## Challenge
+##### "Bridging the Gap Between High-Tech and High-Age Users"
+The existing v2.0 service was limited to simple monitoring and had a UI optimized for dark environments (black background/neon text), which caused poor visibility for farmers working in bright daylight or greenhouses. Additionally, the core user demographic (40s-60s) struggled with complex control settings.
 
-### Process
-Redesigned the mobile app pairing flow using **Bluetooth Low Energy (BLE)**. We introduced:
-- **Visual Guidance**: Step-by-step illustrations for physical sensor placement.
-- **Progress Feedback**: Real-time sync status to reassure users during technical handshakes.
+![v2.0 UI](/images/farm-labs-2.jpg)
 
-### Impact
-- **Active farm installations doubled** within the first quarter.
-- **Customer support tickets dropped by 65%**.
-- Improved retention as farmers felt more confident managing their own hardware ecosystem.
+### Pain Points (User Research):
+* **Visibility:** "I can't see the screen clearly inside the greenhouse."
+* **Complexity:** "Setting up automation rules is too difficult."
+* **Fragmentation:** "I need to manage not just the climate, but also nutrients and sales in one place."
+
+## Solution
+#### A. User-Centered Design (UCD) for Accessibility
+* **Mobile-First Approach:** Transitioned from a responsive web-only service to a **Hybrid App (React Native)** to support various devices (iPhone, Android, Tablets) used in the field.
+* **High-Contrast UI:** Redesigned the interface to ensure high visibility under strong sunlight, specifically catering to the older demographic's visual needs.
+
+#### B. Advanced Logic for Automation (IoT Integration)
+* **Customizable Logic:** Moved beyond simple On/Off controls to a sophisticated **Multi-Factor Automation System**. Users can now set rules based on diverse sensor inputs (Temperature, Humidity, Sunlight, CO2).
+* **Visualized Feedback:** Implemented a log system to track automated actions and push notifications for critical sensor alerts, giving users peace of mind.
+* **Hardware Visualization:** Visualized the complex hardware logic (e.g., nutrient supply machines) into an intuitive GUI.
+
+#### C. All-In-One Ecosystem
+* **Feature Expansion:** Integrated new modules for **Nutrient Management**, **Livestock Management**, and **Market Price Consulting**, transforming the product from a controller to a comprehensive *Farm ERP (Enterprise Resource Planning)* system.
+
+## Outcome
+* **Rapid Adoption:** The number of installed farms surged from **200 to over 530** within months of the v3.0 launch (June 2019).
+* **Business Recognition:**
+    * Selected as a *"First Penguin"* (High-Potential Startup) by KODIT.
+    * Awarded the **Minister of Agriculture Prize** for 4th Industrial Revolution Innovation.
+* **Global Expansion:** Successfully signed the first export contract for smart farms in Vietnam (Oct 2019).
+
+## Takeaways
+* **Domain Agility:**
+    * Quickly mastered complex agricultural concepts (e.g., *Accumulated Temperature*, *Cumulative Solar Radiation*) to build logic that professionals trust.
+* **H/W & S/W Integration:**
+    * Bridged the gap between software UX and hardware engineering constraints. Created flowcharts to visualize invisible hardware logic, enabling effective collaboration with engineers.
     `,
     role: "Project Management, Product Design",
     period: "Feb 2019 — May 2019",

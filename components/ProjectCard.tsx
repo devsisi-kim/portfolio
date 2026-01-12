@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState } from 'react';
 import { Project } from '../types';
 
 interface ProjectCardProps {
@@ -9,7 +9,6 @@ interface ProjectCardProps {
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project, className = "", onClick }) => {
   const cardRef = useRef<HTMLDivElement>(null);
-  const imageRef = useRef<HTMLImageElement>(null);
   const [rotation, setRotation] = useState({ x: 0, y: 0 });
 
   // 3D Tilt Logic
@@ -36,32 +35,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, className = "
   const handleMouseLeave = () => {
     setRotation({ x: 0, y: 0 });
   };
-
-  // Scroll Parallax Logic
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!cardRef.current || !imageRef.current) return;
-      
-      const rect = cardRef.current.getBoundingClientRect();
-      const windowHeight = window.innerHeight;
-      
-      // Calculate how far the card is from the center of the viewport
-      const distancefromCenter = (rect.top + rect.height / 2) - (windowHeight / 2);
-      
-      // Move image slightly based on scroll position (Parallax)
-      // Limit the offset to prevent seeing white space
-      const speed = 0.05; 
-      const translateY = distancefromCenter * speed;
-      
-      imageRef.current.style.transform = `translateY(${translateY}px) scale(1.1)`; // Scale up to cover edges during move
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    // Initial call
-    handleScroll();
-
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   return (
     <div 
@@ -107,12 +80,10 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, className = "
 
         <div className="mt-8 overflow-hidden rounded-xl bg-zinc-200/50 dark:bg-zinc-800/50 ring-1 ring-black/5 dark:ring-white/5 h-[200px] relative">
           <img 
-            ref={imageRef}
             src={project.imageUrl} 
             alt={project.title} 
-            className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-100 ease-linear"
+            className="absolute top-0 left-0 w-full h-full object-cover"
             loading="lazy"
-            style={{ transform: 'scale(1.1)' }} // Default scale for parallax room
           />
         </div>
       </div>
