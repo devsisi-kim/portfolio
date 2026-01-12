@@ -1,20 +1,35 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
 
-# Run and deploy your AI Studio app
+# SIYEON JEON - Portfolio
 
-This contains everything you need to run your app locally.
+포트폴리오 웹사이트입니다. 
 
-View your app in AI Studio: https://ai.studio/apps/drive/1RGILkEm_luKs-Hbdv3DabuZyc54jE538
+## 기술 스택
 
-## Run Locally
+- **Framework**: React 19
+- **Language**: TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **Markdown**: react-markdown
 
-**Prerequisites:**  Node.js
+## 주요 기능
 
+- 프로젝트 갤러리 및 상세 페이지
+- About 페이지 (경력 및 소개)
+- 다크모드 지원
+- 커스텀 커서 애니메이션
+- Glassmorphism 디자인
+- 반응형 레이아웃
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 시작하기
+
+### Prerequisites
+
+- Node.js (권장 버전: 18 이상)
+
+### Installation
+
+1. 의존성 설치:ash
+   npm install
+   
