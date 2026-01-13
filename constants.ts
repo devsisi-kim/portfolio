@@ -17,6 +17,108 @@ export const SOCIAL_LINKS: SocialLink[] = [
  */
 export const PROJECTS: Project[] = [
   {
+    id: "bodab-ai",
+    title: "BODAB.AI",
+    summary: "Insurance product comparison platform renewal",
+    description: "99.6% of visitors flow into the core funnel, leading to a 6.95%p conversion increase.",
+    overview: "Aimed to diagnose core service problems through data analysis and user research, improving the UX and core business indicators ahead of the official launch.",
+    content: `
+## Challenge
+BODAB.AI had been operating a Beta service with the goal of providing objective insurance comparison without requiring personal information. However, internal data showed that users struggled with understanding complex insurance terms, leading to stagnation in the core funnel conversion rate.
+
+## Process
+### Definition of the problem
+We analyzed data and user voices to define our roadmap:
+1. **Data Insight**: Task success for 'Compare Products' was 97.1%, yet satisfaction was low.
+2. **User Insight**: In-depth interviews revealed complex UI layouts.
+3. **Market Analysis**: Competitors were moving towards graph-based data visualization.
+
+![Process Diagram Example](/images/bodab-ai-process.jpg)
+
+### Solution
+We established three key hypotheses to drive the renewal:
+
+1. **Reduction of Cognitive Overload**: Replacing jargon with easy explanations and separating information stages.
+2. **Improving Reliability**: Moving away from internal rankings toward objective data.
+3. **Strengthening Discoverability**: Replacing the floating FAB with a fixed bottom CTA.
+
+### Prototype Video Demo
+You can embed video demonstrations of your product using the standard image syntax with an .mp4 or .webm file.
+
+![BODAB.AI Demo Video](/videos/bodab-demo.mp4)
+
+## Outcome
+* **Service officially opened in Sept 2023.**
+* **Accumulated 100,000 uses** within the first 3 months.
+* **Satisfaction score tripled**: from 20.6 points to 63.6 points.
+* **Conversion rate increased by 6.95%p** (final conversion compared to total visits).
+    `,
+    role: "Project Management, Product Design",
+    period: "Jan 2023 — Aug 2023",
+    tools: ["Figma", "MS Office", "Notion"],
+    domain: ["AI", "Insur-tech"],
+    tags: ["Growth"],
+    imageUrl: "/images/bodab-1.jpg"
+  },
+  {
+    id: "farm-labs",
+    title: "Farm Labs 3.0",
+    summary: "Hardware synchronization UX renewal for smart agriculture monitoring",
+    description: "2x Growth in Installations via UX-Centric Renewal & System Integration.",
+    overview: "Led the comprehensive upgrade of a smart farm solution from a simple monitoring tool (v2.0) to an All-in-One Integrated Farm Management System (v3.0). The renewal focused on mobile accessibility and advanced automation logic, resulting in rapid market adoption.",
+    content: `
+###### As this project's output is confidential, I re-designed the product screen.
+## Challenge
+##### "Bridging the Gap Between High-Tech and High-Age Users"
+The existing v2.0 service was limited to simple monitoring and had a UI optimized for dark environments (black background/neon text), which caused poor visibility for farmers working in bright daylight or greenhouses. Additionally, the core user demographic (40s-60s) struggled with complex control settings.
+
+![v2.0 UI](/images/farm-labs-2.jpg)
+
+### Pain Points (User Research):
+* **Visibility:** "I can't see the screen clearly inside the greenhouse."
+* **Complexity:** "Setting up automation rules is too difficult."
+* **Fragmentation:** "I need to manage not just the climate, but also nutrients and sales in one place."
+
+## Solution
+#### A. User-Centered Design (UCD) for Accessibility
+* **Mobile-First Approach:** Transitioned from a responsive web-only service to a **Hybrid App (React Native)** to support various devices (iPhone, Android, Tablets) used in the field.
+* **High-Contrast UI:** Redesigned the interface to ensure high visibility under strong sunlight, specifically catering to the older demographic's visual needs.
+
+![UCD](/images/farm-labs-4.jpg)
+
+#### B. Advanced Logic for Automation (IoT Integration)
+* **Customizable Logic:** Moved beyond simple On/Off controls to a sophisticated **Multi-Factor Automation System**. Users can now set rules based on diverse sensor inputs (Temperature, Humidity, Sunlight, CO2).
+* **Visualized Feedback:** Implemented a log system to track automated actions and push notifications for critical sensor alerts, giving users peace of mind.
+* **Hardware Visualization:** Visualized the complex hardware logic (e.g., nutrient supply machines) into an intuitive GUI.
+
+![Advanced Logic](/images/farm-labs-3.jpg)
+
+#### C. All-In-One Farm Management
+* **Feature Expansion:** Integrated new modules for **Nutrient Management**, **Livestock Management**, and **Market Price Consulting**, transforming the product from a controller to a comprehensive *Farm ERP (Enterprise Resource Planning)* system.
+
+![Ecosystem](/images/farm-labs-5.jpg)
+
+## Outcome
+* **Rapid Adoption:** The number of installed farms surged from **200 to over 530** within months of the v3.0 launch (June 2019).
+* **Business Recognition:**
+    * Selected as a *"First Penguin"* (High-Potential Startup) by KODIT.
+    * Awarded the **Minister of Agriculture Prize** for 4th Industrial Revolution Innovation.
+* **Global Expansion:** Successfully signed the first export contract for smart farms in Vietnam (Oct 2019).
+
+## Takeaways
+* **Domain Agility:**
+    * Quickly mastered complex agricultural concepts (e.g., *Accumulated Temperature*, *Cumulative Solar Radiation*) to build logic that professionals trust.
+* **H/W & S/W Integration:**
+    * Bridged the gap between software UX and hardware engineering constraints. Created flowcharts to visualize invisible hardware logic, enabling effective collaboration with engineers.
+    `,
+    role: "Project Management, Product Design",
+    period: "Feb 2019 — May 2019",
+    tools: ["Figma", "MS Office", "Zepin", "Asana", "Notion"],
+    domain: ["IoT", "Agriculture"],
+    tags: ["Growth"],
+    imageUrl: "/images/farm-labs-1.jpg"
+  },
+  {
     id: "er",
     title: "Cluon-ER",
     summary: "AI-based Prediction Solution for Emergency Room",
@@ -79,30 +181,36 @@ In an unpredictable ER workflow, a static 'Screening List' is insufficient. An *
   {
     id: "vc",
     title: "VitalCare",
-    summary: "Ensuring Continuity of Care: Transitioning from System-Driven to User-Driven Monitoring",
-    description: "Patient monitoring dashboard optimization",
+    summary: "Patient monitoring dashboard optimization",
+    description: "Ensuring Continuity of Care: Transitioning from System-Driven to User-Driven Monitoring",
     overview: "Redesigned the patient monitoring workflow for 'VitalCare', an AI-based patient deterioration prediction software.",
     content: 
     `
 ## Challenge
-**"When the AI alarm stops, the patient disappears."**   
-VitalCare was designed to prioritize patients with active "Risk Alarms." However, this logic created a critical gap in the actual medical workflow.
+##### "When the AI alarm stops, the patient disappears."
+VitalCare was designed to prioritize patients with screened alarms. However, this logic created a critical gap in the actual medical workflow.
 
-* **The Phenomenon:** The default "24-hour filter" automatically hid patients whose conditions had stabilized or who hadn't triggered a new alarm recently.
-* **The Pain Point (Data-Driven):**
-    * Analysis of VoC (Voice of Customer) revealed that **6.07%** of all feature requests were complaints about "vanishing patients" or "unstable lists."
-    * In a specialized B2B medical domain, a **~6% active complaint rate** signifies a massive **"Silent Majority"** facing a critical workflow disruption.
-* **Verbatim:** *"The patient I was monitoring just vanished."* / *"I only want to see my primary patients."*
-* **Core Problem:** It wasn't just a usability issue; it was a **Safety Risk**. Medical staff felt anxiety about losing track of patients who needed "Continuity of Care" (e.g., patients stabilized after medication but requiring ongoing watch).
+**Phenomenon:**   
+The default "24-hour filter" automatically hid patients whose conditions had stabilized or who hadn't triggered a new alarm recently.   
+* *"The patient I was monitoring just vanished."*   
+* *"I only want to see my primary patients."*   
+
+**Pain Point (Data-Driven):**
+* Analysis of VoC (Voice of Customer) revealed that **6.07%** of all feature requests were complaints about "vanishing patients" or "unstable lists."
+* In a specialized B2B medical domain, a **~6% active complaint rate** signifies a massive **"Silent Majority"** facing a critical workflow disruption.
+
+
+**Core Problem:**   
+It wasn't just a usability issue; it was a **Safety Risk**. Medical staff felt anxiety about losing track of patients who needed "Continuity of Care" (e.g., patients stabilized after medication but requiring ongoing watch).
 
 ## Solution
-**Shift to a "User-Driven Monitoring System"**
+##### Shift to a "User-Driven Monitoring System"
 I shifted the paradigm from "Viewing what the AI shows" to "Viewing what the User decides."
 
 ### Feature A. Patient Pinning (Top-Fixation)
 **"Important patients stay visible, regardless of filters."**
 * **Logic:** Designed a 'Pin' feature that overrides all time filters (e.g., 24h filter) and alarm statuses. Pinned patients are fixed to the top of the dashboard, ensuring permanent visibility.
-* **Cognitive Load Management:** Limited the maximum number of pinned patients to **10 per account**. This constraint prevents the dashboard from becoming cluttered and forces users to prioritize "truly critical" patients, reducing cognitive fatigue.
+* **Cognitive Load Management:** Limited the maximum number of pinned patients to 10 per account. This constraint prevents the dashboard from becoming cluttered and forces users to prioritize "truly critical" patients, reducing cognitive fatigue.
 * **Familiar Interaction:** Adopted UI patterns from EMR (Electronic Medical Records) systems to minimize the learning curve for medical staff.
 
 ### Feature B. Manual Screening
@@ -133,50 +241,6 @@ Beyond the core features, I refined the details to enhance operational efficienc
     domain: ["AI", "Healthcare", "SaMD"],
     tags: ["Growth"],
     imageUrl: "/images/vc-1.jpg"
-  },
-  {
-    id: "bodab-ai",
-    title: "BODAB.AI",
-    summary: "Insurance product comparison platform 'BODAB.AI' renewal.",
-    description: "99.6% of visitors flow into the core funnel, leading to a 6.95%p conversion increase.",
-    overview: "Aimed to diagnose core service problems through data analysis and user research, improving the UX and core business indicators ahead of the official launch.",
-    content: `
-## Challenge
-BODAB.AI had been operating a Beta service with the goal of providing objective insurance comparison without requiring personal information. However, internal data showed that users struggled with understanding complex insurance terms, leading to stagnation in the core funnel conversion rate.
-
-## Process
-### Definition of the problem
-We analyzed data and user voices to define our roadmap:
-1. **Data Insight**: Task success for 'Compare Products' was 97.1%, yet satisfaction was low.
-2. **User Insight**: In-depth interviews revealed complex UI layouts.
-3. **Market Analysis**: Competitors were moving towards graph-based data visualization.
-
-![Process Diagram Example](/images/bodab-ai-process.jpg)
-
-### Solution
-We established three key hypotheses to drive the renewal:
-
-1. **Reduction of Cognitive Overload**: Replacing jargon with easy explanations and separating information stages.
-2. **Improving Reliability**: Moving away from internal rankings toward objective data.
-3. **Strengthening Discoverability**: Replacing the floating FAB with a fixed bottom CTA.
-
-### Prototype Video Demo
-You can embed video demonstrations of your product using the standard image syntax with an .mp4 or .webm file.
-
-![BODAB.AI Demo Video](/videos/bodab-demo.mp4)
-
-## Outcome
-* **Service officially opened in Sept 2023.**
-* **Accumulated 100,000 uses** within the first 3 months.
-* **Satisfaction score tripled**: from 20.6 points to 63.6 points.
-* **Conversion rate increased by 6.95%p** (final conversion compared to total visits).
-    `,
-    role: "Project Management, Product Design",
-    period: "Jan 2023 — Aug 2023",
-    tools: ["Figma", "MS Office", "Notion"],
-    domain: ["AI", "Insur-tech"],
-    tags: ["Growth"],
-    imageUrl: "/images/bodab-1.jpg"
   },
   {
     id: "haein",
@@ -229,57 +293,6 @@ The project successfully centralized data and reduced operational overhead by a 
     domain: ["Construction"],
     tags: ["0 to 1"],
     imageUrl: "/images/haein-1.jpg"
-  },
-  {
-    id: "farm-labs",
-    title: "Farm Labs 3.0",
-    summary: "2x Growth in Installations via UX-Centric Renewal & System Integration.",
-    description: "Hardware synchronization UX renewal for smart agriculture monitoring.",
-    overview: "Led the comprehensive upgrade of a smart farm solution from a simple monitoring tool (v2.0) to an All-in-One Integrated Farm Management System (v3.0). The renewal focused on mobile accessibility and advanced automation logic, resulting in rapid market adoption.",
-    content: `
-## Challenge
-##### "Bridging the Gap Between High-Tech and High-Age Users"
-The existing v2.0 service was limited to simple monitoring and had a UI optimized for dark environments (black background/neon text), which caused poor visibility for farmers working in bright daylight or greenhouses. Additionally, the core user demographic (40s-60s) struggled with complex control settings.
-
-![v2.0 UI](/images/farm-labs-2.jpg)
-
-### Pain Points (User Research):
-* **Visibility:** "I can't see the screen clearly inside the greenhouse."
-* **Complexity:** "Setting up automation rules is too difficult."
-* **Fragmentation:** "I need to manage not just the climate, but also nutrients and sales in one place."
-
-## Solution
-#### A. User-Centered Design (UCD) for Accessibility
-* **Mobile-First Approach:** Transitioned from a responsive web-only service to a **Hybrid App (React Native)** to support various devices (iPhone, Android, Tablets) used in the field.
-* **High-Contrast UI:** Redesigned the interface to ensure high visibility under strong sunlight, specifically catering to the older demographic's visual needs.
-
-#### B. Advanced Logic for Automation (IoT Integration)
-* **Customizable Logic:** Moved beyond simple On/Off controls to a sophisticated **Multi-Factor Automation System**. Users can now set rules based on diverse sensor inputs (Temperature, Humidity, Sunlight, CO2).
-* **Visualized Feedback:** Implemented a log system to track automated actions and push notifications for critical sensor alerts, giving users peace of mind.
-* **Hardware Visualization:** Visualized the complex hardware logic (e.g., nutrient supply machines) into an intuitive GUI.
-
-#### C. All-In-One Ecosystem
-* **Feature Expansion:** Integrated new modules for **Nutrient Management**, **Livestock Management**, and **Market Price Consulting**, transforming the product from a controller to a comprehensive *Farm ERP (Enterprise Resource Planning)* system.
-
-## Outcome
-* **Rapid Adoption:** The number of installed farms surged from **200 to over 530** within months of the v3.0 launch (June 2019).
-* **Business Recognition:**
-    * Selected as a *"First Penguin"* (High-Potential Startup) by KODIT.
-    * Awarded the **Minister of Agriculture Prize** for 4th Industrial Revolution Innovation.
-* **Global Expansion:** Successfully signed the first export contract for smart farms in Vietnam (Oct 2019).
-
-## Takeaways
-* **Domain Agility:**
-    * Quickly mastered complex agricultural concepts (e.g., *Accumulated Temperature*, *Cumulative Solar Radiation*) to build logic that professionals trust.
-* **H/W & S/W Integration:**
-    * Bridged the gap between software UX and hardware engineering constraints. Created flowcharts to visualize invisible hardware logic, enabling effective collaboration with engineers.
-    `,
-    role: "Project Management, Product Design",
-    period: "Feb 2019 — May 2019",
-    tools: ["Figma", "MS Office", "Zepin", "Asana", "Notion"],
-    domain: ["IoT", "Agriculture"],
-    tags: ["Growth"],
-    imageUrl: "/images/farm-labs-1.jpg"
   },
   {
     id: "coco",

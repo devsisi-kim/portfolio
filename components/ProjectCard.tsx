@@ -73,7 +73,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, className = "
           <h3 className="mb-2 text-2xl font-bold leading-tight tracking-tight">
             {project.title}
           </h3>
-          <p className="text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">
+          <p className="text-m leading-relaxed text-zinc-600 dark:text-zinc-400">
             {project.summary}
           </p>
         </div>
