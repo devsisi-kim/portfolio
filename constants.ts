@@ -1,8 +1,8 @@
 import { Project, Experience, SocialLink } from './types';
 
 export const OWNER_NAME = "SIYEON JEON";
-export const OWNER_ROLE = "Product Manager with Design & Data Literacy";
-export const OWNER_BIO = "A product maker who enjoys facing problems and feels a sense of accomplishment in the process of solving them.";
+export const OWNER_ROLE = "Product Designer & Manager specialized in Data-driven UX";
+export const OWNER_BIO = "With a unique background in Fine Arts and currently expanding into Statistics (B.S.), I bridge the gap between creative design and data logic. I specialize in solving high-stakes problems in regulated industries like Medical AI and B2B SaaS. I don't just design interfaces; I translate complicated data into intuitive, revenue-generating user experiences.";
 export const PROFILE_IMAGE = "/images/profile.jpg";
 
 export const SOCIAL_LINKS: SocialLink[] = [
@@ -19,7 +19,7 @@ export const PROJECTS: Project[] = [
   {
     id: "bodab-ai",
     title: "BODAB.AI",
-    summary: "Insurance product comparison platform renewal",
+    summary: "Insurance product comparison platform renewal.",
     description: "99.6% of visitors flow into the core funnel, leading to a 6.95%p conversion increase.",
     overview: "Aimed to diagnose core service problems through data analysis and user research, improving the UX and core business indicators ahead of the official launch.",
     content: `
@@ -63,8 +63,8 @@ You can embed video demonstrations of your product using the standard image synt
   {
     id: "farm-labs",
     title: "Farm Labs 3.0",
-    summary: "Hardware synchronization UX renewal for smart agriculture monitoring",
-    description: "2x Growth in Installations via UX-Centric Renewal & System Integration.",
+    summary: "2x Growth in Installations via UX-Centric Renewal & System Integration.",
+    description: "Hardware synchronization UX renewal for smart agriculture monitoring.",
     overview: "Led the comprehensive upgrade of a smart farm solution from a simple monitoring tool (v2.0) to an All-in-One Integrated Farm Management System (v3.0). The renewal focused on mobile accessibility and advanced automation logic, resulting in rapid market adoption.",
     content: `
 ###### As this project's output is confidential, I re-designed the product screen.

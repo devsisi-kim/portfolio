@@ -223,7 +223,7 @@ const App: React.FC = () => {
 
               <div className="space-y-16">
                 <div className="space-y-6">
-                  <h2 className="text-4xl font-bold sm:text-6xl tracking-tight leading-tight">Solving problems through focus.</h2>
+                  <h2 className="text-4xl font-bold sm:text-6xl tracking-tight leading-tight">Design with Data, Manage with Strategy</h2>
                   <p className="text-xl leading-relaxed text-zinc-600 dark:text-zinc-400">
                     {OWNER_BIO}
                   </p>
