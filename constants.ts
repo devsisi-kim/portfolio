@@ -14,12 +14,15 @@ export const SOCIAL_LINKS: SocialLink[] = [
  * PROJECTS ARRAY
  * - To add a project: Add a new object to this array.
  * - To change order: Move the objects up or down in this list.
+ * Video add
+ * - To add video: ![BODAB.AI Demo Video](/videos/bodab-demo.mp4)
  */
+
 export const PROJECTS: Project[] = [
   {
     id: "bodab-ai",
     title: "BODAB.AI",
-    summary: "Insurance product comparison platform renewal.",
+    summary: "Insurance product comparison platform design.",
     description: "99.6% of visitors flow into the core funnel, leading to a 6.95%p conversion increase.",
     overview: "Aimed to diagnose core service problems through data analysis and user research, improving the UX and core business indicators ahead of the official launch.",
     content: `
@@ -29,29 +32,46 @@ BODAB.AI had been operating a Beta service with the goal of providing objective 
 ## Process
 ### Definition of the problem
 We analyzed data and user voices to define our roadmap:
-1. **Data Insight**: Task success for 'Compare Products' was 97.1%, yet satisfaction was low.
-2. **User Insight**: In-depth interviews revealed complex UI layouts.
-3. **Market Analysis**: Competitors were moving towards graph-based data visualization.
+1. **Data Insight**: Task success for 'Compare Products' was 97.1%, yet satisfaction(Efficiency, Informational Value) was lower than other tasks.
+2. **User Insight**: Usability tests and In-depth interviews revealed complex UI layouts.
 
-![Process Diagram Example](/images/bodab-ai-process.jpg)
+    * *"There is too many buttons, I don't know what should I click."*
+    * *"Too many texts."*
+    * *"Hard to understand these terms. So I need to google it."*
 
 ### Solution
 We established three key hypotheses to drive the renewal:
 
-1. **Reduction of Cognitive Overload**: Replacing jargon with easy explanations and separating information stages.
-2. **Improving Reliability**: Moving away from internal rankings toward objective data.
-3. **Strengthening Discoverability**: Replacing the floating FAB with a fixed bottom CTA.
+#### Reduction of Cognitive Overload
+* **Progressive Disclosure of information:** Designed to minimize the learning burden that users feel at the beginning of the service and obtain appropriate information when needed.
+* **Replacing jargon with easy explanations:** Remove difficult terms and complex options at the early step. And through 'easy-to-understand explanation' providing additional information only when user needed.
 
-### Prototype Video Demo
-You can embed video demonstrations of your product using the standard image syntax with an .mp4 or .webm file.
+![Progressive Disclosure](/images/bodab-3.jpg)
 
-![BODAB.AI Demo Video](/videos/bodab-demo.mp4)
+#### Improving Reliability
+* **Emphasize the data that users expect and want:** Emphasizing the 'price', Coverage' and other additional information by insurance type. To support users to make their own judgments based on objective data.
+* **Moving away from internal rankings toward objective data:** Remove the 'BODAB index graph' and the ranking (medal) display, which are indicators that can cause user distrust. 
+
+#### Strengthening Discoverability
+* **Visual hierarchy redesign for list UI:** Removed the vivid background color and FAB(Floating Action Button) that distracted users' attention, and enlarge the bottom CTA button that occupies the entire width of the screen.
+* **Improvement of the core function 'comparison' function UX:** Emphasizing the difference value between compared product, user can intuitively compare at a glance without unnecessary eye movements.
+
+![List UI](/images/bodab-4.jpg)
 
 ## Outcome
-* **Service officially opened in Sept 2023.**
-* **Accumulated 100,000 uses** within the first 3 months.
-* **Satisfaction score tripled**: from 20.6 points to 63.6 points.
+* **Service officially opened** in Sept 2023. and accumulated 100,000 uses within the first 3 months.
 * **Conversion rate increased by 6.95%p** (final conversion compared to total visits).
+    * Product view ratio for visitors (top funnel): 12.5% to 99.58% (+87.08%p) 
+    * Product view user-based conversion rate (middle funnel): 4.35% to 7.53% (+3.18%p)
+    * Final conversion rate of all visitors (all funnel): 0.54% to 7.49% (+6.95%p)
+* **Satisfaction score tripled** from 20.6 points to 63.6 points.
+![Survey](/images/bodab-5.jpg)
+* **CTA button click ranking 5 steps up:** As a result of the improved screen's Touch Heatmap analysis, we confirmed that the user's touch is focused on the bottom CTA button as intended. This led to a quantitative performance that raised the CTA button click ranking from the previous 10th to the 5th place. 
+![CTA](/images/bodab-6.jpg)
+
+## Takeaways
+* It was a project that was carried out with the most people among the projects I had experienced before, and I was able to strengthen my project management and collaboration capabilities. In particular, I felt the importance of understanding the interests of various departments and strategically operating the project.
+* Based on various UX research and usability tests, we established a UX improvement strategy and achieved an improvement effect similar to what we predicted.
     `,
     role: "Project Management, Product Design",
     period: "Jan 2023 — Aug 2023",
@@ -63,8 +83,8 @@ You can embed video demonstrations of your product using the standard image synt
   {
     id: "farm-labs",
     title: "Farm Labs 3.0",
-    summary: "2x Growth in Installations via UX-Centric Renewal & System Integration.",
-    description: "Hardware synchronization UX renewal for smart agriculture monitoring.",
+    summary: "Hardware synchronization UX renewal for smart farm monitoring.",
+    description: "2x Growth in Installations via UX-Centric Renewal & System Integration.",
     overview: "Led the comprehensive upgrade of a smart farm solution from a simple monitoring tool (v2.0) to an All-in-One Integrated Farm Management System (v3.0). The renewal focused on mobile accessibility and advanced automation logic, resulting in rapid market adoption.",
     content: `
 ###### As this project's output is confidential, I re-designed the product screen.
@@ -224,12 +244,12 @@ Beyond the core features, I refined the details to enhance operational efficienc
 * **Visual Feedback:** Added percentage (%) progress bars to History Reports to manage user expectations during system wait times.
 * **Search UX:** Reduced the depth of the patient search flow, allowing immediate actions (Pin/Unpin) directly within the search results.
 
-### Expected Outcome
+## Expected Outcome
 * **Problem Resolution:** Expecting **100% resolution** of the 22 critical VoC cases related to "patient list instability."
 * **Behavior Tracking:** Designed event logs to track the **"Usage Rate"** of the new Pinning feature compared to the legacy 'Bookmark' feature.
 * **Future Optimization:** Plan to analyze usage patterns based on hospital size (Tertiary vs. General Hospitals) to further refine the logic post-launch (Q1 2026).
 
-### Takeaways
+## Takeaways
 * **Balancing AI & Human Agency:**
     * Learned that while AI automation is powerful, providing **"Human Overrides"** (Pinning/Manual Screening) is essential for building trust and safety in medical software.
 * **Voice of the Silent Majority:**
