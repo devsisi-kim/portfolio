@@ -169,18 +169,18 @@ The "Initial Triage" phase is where resources are scarcest and human error risks
 #### Hypothesis:
 In an unpredictable ER workflow, a static 'Screening List' is insufficient. An **'Alarm-based Dashboard'** that actively notifies clinicians of risks is more effective.
 #### Execution:
-* **Dashboard UI:** Replaced the legacy list view with a comprehensive dashboard.
 * **Visual Alerts:** Designed 'Red Color' card UIs that trigger immediately when prediction scores (e.g., Cardiac Arrest risk) reach critical levels.
 * **Alarm Fatigue Management:** Implemented a **'Snooze' function**, allowing staff to temporarily mute known risks to prevent desensitization to alarms.
 
 ### Strategy 2: Advanced Filtering Logic for ER Workflows
-#### 'View Monitored Patients Only' Filter:
-* **Problem:** In some ERs, zone boundaries are ambiguous, or EMR integration for zone data is unavailable, making it difficult for staff to filter patients by their assigned area.
-* **Solution:** Developed a **'Monitoring' status filter** that allows staff to manually flag and view specific patients. This serves as a critical workaround for monitoring patients in unsupported zones or focusing on high-priority individuals within an assigned area.
 #### Zone Selection & Auto-Reset Logic:
 * **Context:** Unlike general wards, ERs are strictly divided into 'Zones' (e.g., Triage, Resuscitation, General).
 * **Feature:** Placed a **'Zone Selector'** at the top of the dashboard for quick visibility of assigned patients.
 * **Shift Optimization:** Implemented a logic that **resets the Zone Filter to 'Default (All)' upon logout**. This prevents confusion during shift changes, ensuring the next doctor doesn't miss patients due to inherited filter settings from the previous shift.
+
+#### 'View Observing Patients Only' Filter:
+* **Problem:** In some ERs, zone boundaries are ambiguous, or EMR integration for zone data is unavailable, making it difficult for staff to filter patients by their assigned area.
+* **Solution:** Developed a **'Observing Patients Only' filter** that allows staff to manually flag and view specific patients. This serves as a critical workaround for monitoring patients in unsupported zones or focusing on high-priority individuals within an assigned area.
 
 ### Strategy 3: Regulatory Compliance & Security
 * **Cybersecurity:** Implemented robust security features (Account Lockout after 5 failures, Auto-logout, Duplicate Login Prevention) in compliance with **MFDS Cybersecurity Guidelines**.
@@ -256,7 +256,7 @@ Beyond the core features, I refined the details to enhance operational efficienc
 * **Voice of the Silent Majority:**
     * Validated that in B2B products, a small percentage of vocal complaints often represents a fatal flaw in the workflow that affects all users.
     `,
-    role: "Product Design, Associate Project Manager",
+    role: "Product Design, Associate Project Management",
     period: "Jan 2024 — Jan 2025",
     tools: ["Figma", "Jira", "Confluence", "Microsoft Office"],
     domain: ["AI", "Healthcare", "SaMD"],
