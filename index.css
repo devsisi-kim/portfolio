@@ -13,3 +13,11 @@
 */
 
 /* 추가 스타일이 필요하면 여기에 작성하세요 */
+/* Nested List styling */
+.prose ul ul,
+.prose ul ol,
+.prose ol ul,
+.prose ol ol {
+  margin-top: 0.75em;
+  margin-bottom: 0;
+}

@@ -205,8 +205,8 @@ In an unpredictable ER workflow, a static 'Screening List' is insufficient. An *
     summary: "Patient monitoring dashboard optimization",
     description: "Ensuring Continuity of Care: Transitioning from System-Driven to User-Driven Monitoring",
     overview: "Redesigned the patient monitoring workflow for 'VitalCare', an AI-based patient deterioration prediction software.",
-    content: 
-    `
+    content:
+      `
 ## Challenge
 ##### "When the AI alarm stops, the patient disappears."
 VitalCare was designed to prioritize patients with screened alarms. However, this logic created a critical gap in the actual medical workflow.
@@ -274,7 +274,7 @@ Beyond the core features, I refined the details to enhance operational efficienc
 ### "High Costs and Low Flexibility of External Solutions" 
 The company relied on a third-party subscription service for managing heavy equipment assets. However, this incurred high monthly fixed costs and failed to support the specific, complex workflows of our dealership business.
 
-![haein before](/images/heain-2.jpg)
+![haein before](/images/haein-2.jpg)
 
 * **Problem:** The generic external tool could not accommodate our specific data structure, leading to manual workarounds and data fragmentation.
 * **Goal:** Build an in-house SaaS solution to regain data sovereignty, cut costs, and automate manual processes.
@@ -295,7 +295,7 @@ I identified that even for the same product, the "Definition of Value" differed 
 **Problem:**
 The client requested a feature to "view multiple equipment at once on the map," but displaying hundreds of markers simultaneously caused UI clutter and performance issues.
 
-![haein before](/images/heain-3.jpg)
+![haein before](/images/haein-3.jpg)
 **Action (Technical Collaboration):**
 * **API Analysis:** proactively analyzed the **Kakao Map API documentation** to find a feasible solution.
 * **Clusterer Implementation:** Proposed using the **'Clusterer'** function (grouping nearby markers) found in the API docs.
